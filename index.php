@@ -1,5 +1,16 @@
 <?php
 
+echo $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+echo "<br/><hr/>";
+echo $server = $url["host"];
+echo "<br/>";
+echo $username = $url["user"];
+echo "<br/>";
+echo $password = $url["pass"];
+echo "<br/>";
+echo $db = substr($url["path"], 1);
+echo "<br/>";
+
 die("shreyas");
 /**
  * Front to the WordPress application. This file doesn't do anything, but loads
